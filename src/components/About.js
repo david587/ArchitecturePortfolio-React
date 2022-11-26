@@ -20,8 +20,8 @@ export default function About() {
                 <button className='py-2 ml-16 text-xl text-green underline decoration-solid'>Download CV <img src={Cv} alt="Cv" className='w-9 inline-block underline decoration-solid' /></button>
             </div>
         </div>
-        <div className='flex-1 mt-5'>
-            <img src={Logo} alt="Timea" className='w-80 '/>
+        <div className='flex-1 mt-5 text-center'>
+            <img src={Logo} alt="Timea" className='w-80 ml-auto mr-auto'/>
         </div>
     </div>
     </>
