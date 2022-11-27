@@ -3,9 +3,16 @@ import React from 'react'
 import Phone from "../assets/Phone.gif"
 import Area from "../assets/Area.gif"
 import Email from "../assets/Email.gif"
+import  Logo  from "../assets/Mimi.png"
 
 //styles
 import "./Footer.css"
+
+//fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -46,11 +53,17 @@ export default function Footer() {
         </div>
       </div>
         
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-2 justify-center items-center h-[80px]
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-2 justify-center items-center h-[80px]
         border-2 border-white mx-20'>
-            <div>alaa</div>
-            <div>aa</div>
-            <div>aa</div>
+            <div className='text-white text-[25px] text-center'> 
+            <FontAwesomeIcon icon={faFacebook} className="px-5"></FontAwesomeIcon> 
+            <FontAwesomeIcon icon={faInstagram} className="px-5"></FontAwesomeIcon> 
+            <FontAwesomeIcon icon={faTwitter} className="px-5"></FontAwesomeIcon> 
+            </div>
+            <div className='text-white font-normal text-center'>Privacy Policy <span>|</span> Terms & Conditions</div>
+            <div className=''>
+            <img src={Logo} alt="logo" className='w-28 mx-auto block '/>
+            </div>
           </div>
     </div>
     </>

@@ -4,7 +4,6 @@ import Globe from "../assets/Globe.gif"
 import Project1 from "../assets/Project1.jpg"
 import Project2 from "../assets/Project2.jpg"
 import Project3 from "../assets/Project3.jpg"
-import Mouse from "../assets/Mouse.gif"
 //css
 import "./Portfolio.css"
 
