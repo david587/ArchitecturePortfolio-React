@@ -11,12 +11,10 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    
   <div>
   <Navbar/>
   <About/>
-  <Rounded>
-  </Rounded>
+  <Rounded/>
   <Reasons/>
   <Services/>
   <Portfolio/>

@@ -13,3 +13,14 @@
     background-position: center;
     background-size: cover;
 }
+
+@media only screen and (max-width: 600px){
+	.spacer4{
+        height: 800px;
+    }
+}
+@media only screen and (max-width: 425px){
+	.spacer4{
+        height: 800px;
+    }
+}

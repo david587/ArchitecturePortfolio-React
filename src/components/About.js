@@ -1,7 +1,7 @@
 import React from 'react'
 //assets
 import  Logo  from "../assets/Profile.jpg"
-import  Wave  from "../assets/Wave.gif"
+import  Home  from "../assets/Home.gif"
 import  Cv  from "../assets/Cv.gif"
 
 
@@ -10,14 +10,14 @@ export default function About() {
   return (
     <>
     <div className='grid-reverse md:flex md:justify-between justify-center items-center'>
-        <div className='ml-20 flex-1'>
-            <p className='text-xl text-green'> <img src={Wave} alt="Hello" className='w-9 inline-block' /> Welcome everyone</p>
+        <div className='md:ml-20 flex-1 mx-3'>
+            <p className='text-xl text-yellow text-center my-3 md:text-left'> <img src={Home} alt="Hello" className='w-9 inline-block' /> Welcome everyone</p>
             <div className=''>
-                <h1 className='text-4xl font-bold '>My name is  <span className='text-green'>T</span>imea, Improve your Home design, Let me make a Change. </h1>
-                <p className='font-normal text-gray-500 py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id nam at ab maiores debitis similique quasi, voluptatibus inventore vitae impedit 
+                <h1 className=' text-2xl text-center md:text-left md:text-4xl font-bold '>My name is  <span className='text-yellow'>T</span>imea, Improve your Home design, Let me make a Change. </h1>
+                <p className='font-normal text-gray-500 text-center md:text-left py-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id nam at ab maiores debitis similique quasi, voluptatibus inventore vitae impedit 
                 veritatis adipisci distinctio vel amet, libero magnam! Tenetur, quia.</p>
-                <button className='py-2 px-3 border-solid border-green border-2 text-xl text-green'>Contact me</button>
-                <button className='py-2 ml-16 text-xl text-green underline decoration-solid'>Download CV <img src={Cv} alt="Cv" className='w-9 inline-block underline decoration-solid' /></button>
+                <button className='py-2 px-3 border-solid border-yellow border-2 text-xl text-yellow mx-auto block md:mx-0 md:inline-block'>Contact me</button>
+                <button className='py-2  mx-auto block text-yellow underline decoration-solid text-xl mt-4 md:mt-0 md:mx-0 md:inline-block md:text-left md:ml-16'>Download CV <img src={Cv} alt="Cv" className='w-9 md:inline-block underline decoration-solid hidden' /></button>
             </div>
         </div>
         <div className='flex-1 mt-5 text-center'>

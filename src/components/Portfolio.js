@@ -13,7 +13,7 @@ export default function () {
     <div className="spacer2 layer2"></div>
     <div className="bg-stone-300">
     <p className='text-center text-xl font-light'><img src={Globe} alt="work" className='inline-block w-8'/> Show my best Portfolio</p>
-    <h1 className='text-4xl font-medium text-center my-5'>The Best Porfolio From My Works</h1>
+    <h1 className='text-4xl font-medium text-center my-5 mx-1 md:mx-0'>The Best Porfolio From My Works</h1>
     <p className='text-center font-extralight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quia laborum perspiciatis, earum deserunt voluptas vitae vero aspernatur neque harum.</p>
     <div className='grid md:grid-cols-3 grid-cols-1 gap-2 justify-center items-center my-7 md:mx-20'>
         <div>

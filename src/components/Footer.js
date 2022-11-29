@@ -18,8 +18,8 @@ export default function Footer() {
   return (
     <>
     <div className="spacer4 layer4dark">
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-2  text-left text-white'>
-      <div className='mt-[60px] border-r-2 border-white h-[180px] ml-20 pr-10'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-2  text-left text-white'>
+      <div className='mt-[60px] border-r-2 border-white h-[180px] lg:ml-20 lg:pr-10 ml-4 md:ml-0'>
           <p className='font-medium mb-4'>About Me</p>
           <p className='text-stone-300'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur fugiat autem</p>
         </div>
@@ -54,14 +54,14 @@ export default function Footer() {
       </div>
         
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2 justify-center items-center h-[80px]
-        border-2 border-white mx-20'>
+        border-2 border-white mx-2 md:mx-20 '>
             <div className='text-white text-[25px] text-center'> 
             <FontAwesomeIcon icon={faFacebook} className="px-5"></FontAwesomeIcon> 
             <FontAwesomeIcon icon={faInstagram} className="px-5"></FontAwesomeIcon> 
             <FontAwesomeIcon icon={faTwitter} className="px-5"></FontAwesomeIcon> 
             </div>
             <div className='text-white font-normal text-center'>Privacy Policy <span>|</span> Terms & Conditions</div>
-            <div className=''>
+            <div className='mt-8 md:mt-0'>
             <img src={Logo} alt="logo" className='w-28 mx-auto block '/>
             </div>
           </div>
