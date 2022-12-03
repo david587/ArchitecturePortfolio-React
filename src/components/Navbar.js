@@ -1,6 +1,7 @@
 import React from 'react'
-import { useState, useRef } from 'react'
-
+import { useState, useRef, useEffect } from 'react'
+//animation library
+import { motion } from "framer-motion"
 
 //assets
 import  Logo  from "../assets/Mimi.png"
@@ -18,6 +19,7 @@ export default function Navbar() {
   const handleToggle = ()=>{
     setIsActive(!isActive);
   }
+
   
   return (
     <>
@@ -51,21 +53,22 @@ export default function Navbar() {
       <div className='flex-1'>
          <img onClick={handleToggle} src={Menu} alt="Menu" className='w-[25px] ml-[85%]'/>
       </div>
-      </div> 
+      </div>
+      
       
     
     {/* mobile navbar */}
-      <div  className={isActive ? "hidden": "inline-block w-[100%] h-[100%] relative text-center bg-stone-100 md:hidden"}>
-      <ul className='text-2xl font-normal underline hover:d'>
-        <li className='p-3.5'>Home</li>
-        <li className='p-3.5'>Services</li>
-        <li className='p-3.5'>Projects</li>
-        <li className='p-3.5'>Contacts</li>
+    <div  className={isActive ? "hidden": "inline-block w-[100%] h-[100%] relative text-center bg-stone-100 md:hidden"}>
+      <ul className='text-2xl font-normal hover:d '>
+        <li className='p-3.5  border-b-2 border-stone-400'>Home</li>
+        <li className='p-3.5  border-b-2 border-stone-400'>Services</li>
+        <li className='p-3.5  border-b-2 border-stone-400'>Projects</li>
+        <li className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li>
       </ul>
       <div>
       <button className='w-[25%] mx-auto block bg-yellow rounded-full mb-5'> <img src={Moon} alt="Theme" className='w-6 mx-auto block py-2'/> </button>
       </div>
-    </div>
+    </div> 
     </>
   )
 }

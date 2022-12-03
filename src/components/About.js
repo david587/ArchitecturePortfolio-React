@@ -21,7 +21,7 @@ export default function About() {
             </div>
         </div>
         <div className='flex-1 mt-5 text-center'>
-            <img src={Logo} alt="Timea" className='w-80 ml-auto mr-auto'/>
+            <img src={Logo} alt="Timea" className='w-80 ml-auto mr-auto rounded-sm'/>
         </div>
     </div>
     </>
