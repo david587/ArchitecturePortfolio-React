@@ -11,8 +11,8 @@
 .layer{
     background-image: url("../assets/wave-haikei7.svg");
 }
-.layer1{
-    background-image: url("../assets/wave-haikei8.svg");
+.layer.dark{
+    background-image: url("../assets/wave-haikei7dark.svg");
 }
 
 @media only screen and (max-width: 600px){
@@ -25,7 +25,6 @@
         height: 250px;
     }
 }
-
 
 /* .spacer1{
     aspect-ratio: 400/500;

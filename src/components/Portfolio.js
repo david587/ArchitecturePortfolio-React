@@ -7,12 +7,16 @@ import Project3 from "../assets/Project3.jpg"
 //css
 import "./Portfolio.css"
 
+import { useTheme } from "../hooks/useTheme"
+
 export default function () {
+  const { mode } = useTheme()
   return (
     <>
-    <div className="spacer2 layer2"></div>
-    <div className="bg-stone-300">
-    <p className='text-center text-xl font-light'><img src={Globe} alt="work" className='inline-block w-8'/> Show my best Portfolio</p>
+    <div className={`spacer2 layer2 ${mode}`}></div>
+    <div className={`bg-stone-300 portfolio ${mode} xl:px-[130px]`}>
+    <p className='text-center text-xl font-light'><img src={Globe} style={{ filter: mode === "dark" ? "invert(100%)" : "invert(20%)"}}
+    alt="work" className='inline-block w-8'/> Show my best Portfolio</p>
     <h1 className='text-4xl font-medium text-center my-5 mx-1 md:mx-0'>The Best Porfolio From My Works</h1>
     <p className='text-center font-extralight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quia laborum perspiciatis, earum deserunt voluptas vitae vero aspernatur neque harum.</p>
     <div className='grid md:grid-cols-3 grid-cols-1 gap-2 justify-center items-center my-7 md:mx-20'>
@@ -32,7 +36,7 @@ export default function () {
       <img src={Mouse} alt="mouse" 
       className='w-[50px] h-[52px] absolute top-0 left-0 border-white border-2 rounded-lg'/>
       </button> */}
-      <button className='border-2 px-5 py-2 text-xl font-normal ml-auto mr-auto block'>View More</button>
+      <button className='border-2 px-5 py-2 text-xl font-normal ml-auto mr-auto block '>View More</button>
       <div className='h-9'></div>
     </div>
     </div>

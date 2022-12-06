@@ -2,6 +2,9 @@
 .layer2{
     background-image: url("../assets/wave-haikei3.svg");
 }
+.layer2.dark{
+    background-image: url("../assets/wave-haikei3dark.svg");
+}
 .spacer2{
     /* aspect-ratio: 600/150;
     width: 100%; */
@@ -9,4 +12,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.portfolio.dark{
+    background-color: rgb(62, 61, 61);
 }

@@ -7,11 +7,15 @@ import Reasons from './components/Reasons';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
+//hook
+import { useTheme } from "./hooks/useTheme"
 
 
-function App() {
+function App() {  
+  const { mode } = useTheme()
+
   return (
-  <div>
+  <div className={`App ${mode}`}>
   <Navbar/>
   <About/>
   <Rounded/>
