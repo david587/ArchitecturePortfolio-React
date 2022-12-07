@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState} from 'react'
+import { useState,useEffect} from 'react'
 //animation library
 import { motion } from "framer-motion"
 //style
@@ -13,26 +13,41 @@ import  Theme  from "../assets/Moon.svg"
 //hook
 import { useTheme } from "../hooks/useTheme"
 
-
-
 export default function Navbar() {
+
+  // const [notes, setNotes] = useState(storedNotes)
+  const { changeMode, mode } = useTheme()
+ 
+
+  
+
   const [isActive, setIsActive] =useState(true);
-  const [isDark, setIsDark] = useState(false);
-  // const div = useRef();
   const handleToggle = ()=>{
     setIsActive(!isActive);
   }
 
-    const { changeMode, mode } = useTheme()
+  
+  const [modes, setModes] = useState(mode)
+  
 
-    const toggleMode=()=>{
-        //if the mode is currently dark we pass light
-        changeMode(mode === "light" ? "dark" : "light")
-        console.log(mode);
-        setIsDark(!isDark);
-    }
+  useEffect(() => {
+    const data = window.localStorage.getItem('mode');
+    if(data !== null) setModes(JSON.parse(data))
+  },[])
+ 
+  useEffect(() => {
+    window.localStorage.setItem('mode', JSON.stringify(modes))
+  }, [modes])
 
+  
+  
+  const toggleMode=()=>{
+    setModes(mode)
+    changeMode(modes=== "dark" ? "light" : "dark")
+  }
 
+  
+  
   return (
     <>
     <div className='md:flex md:flex-row md:justify-between justify-center items-center mb-5 hidden md:visible xl:px-[130px]'>
@@ -90,4 +105,5 @@ export default function Navbar() {
     </>
   )
 }
+
 
