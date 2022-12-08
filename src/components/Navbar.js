@@ -27,23 +27,28 @@ export default function Navbar() {
   }
 
   
-  const [modes, setModes] = useState(mode)
-  
+  // const [modes, setModes] = useState(data);
 
-  useEffect(() => {
-    const data = window.localStorage.getItem('mode');
-    if(data !== null) setModes(JSON.parse(data))
-  },[])
+
  
   useEffect(() => {
-    window.localStorage.setItem('mode', JSON.stringify(modes))
-  }, [modes])
+    window.localStorage.setItem('mode', JSON.stringify(mode))
+  }, [mode])
 
   
+  const data = JSON.parse(window.localStorage.getItem('mode'));
+  console.log("dataout",data);
+  console.log("modeout",mode);
+  //when we reload the page check the localstorage
+  useEffect(()=>{
+    if(data!=mode){
+      changeMode(mode === "dark" ? "light":"dark")
+    }
+  },[])
+   
   
   const toggleMode=()=>{
-    setModes(mode)
-    changeMode(modes=== "dark" ? "light" : "dark")
+    changeMode(mode === "dark" ? "light":"dark")
   }
 
   
@@ -105,5 +110,3 @@ export default function Navbar() {
     </>
   )
 }
-
-
