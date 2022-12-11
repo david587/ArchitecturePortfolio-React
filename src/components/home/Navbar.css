@@ -1,8 +1,11 @@
 .nav.dark{
     background-color: #2b2928;
 }
-a.active{
-    background-color: #cfb194;
-    padding: 3px 13px 6px 13px;
-    border-radius: 15px;
+
+@media (min-width:768px){
+    a.active{
+        background-color: #cfb194;
+        padding: 3px 13px 6px 13px;
+        border-radius: 15px;
+    }
 }

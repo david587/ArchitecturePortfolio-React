@@ -19,9 +19,10 @@ function App() {
   <div className={`App ${mode}`}>
     <Navbar/>
     <Routes>
-      <Route path="/" element={[<About/>,<Rounded/>,<Reasons/>,<Services/>,<Portfolio/>] }/>
+      <Route path="/" exact={true} element={[<About/>,<Rounded/>,<Reasons/>,<Services/>,<Portfolio/>] }/>
       <Route path="/services" element={<Rounded/> }/>
       <Route path="/projects" element={<Services/> }/>
+      <Route path="/contacts" element={<Services/> }/>
     </Routes>
     <Footer/>
   </div>

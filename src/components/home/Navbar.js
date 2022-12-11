@@ -13,7 +13,7 @@ import  Theme  from "../../assets/Moon.svg"
 //hook
 import { useTheme } from "../../hooks/useTheme"
 
-import {NavLink,Router} from "react-router-dom"
+import {NavLink,Link} from "react-router-dom"
 
 
 export default function Navbar() {
@@ -60,7 +60,7 @@ export default function Navbar() {
     <>
     <div className='md:flex md:flex-row md:justify-between justify-center items-center mb-5 hidden md:visible xl:px-[130px]'>
       <div>
-        <img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/>
+        <Link exact to="/"><img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/></Link>
       </div>
       <div>
         <NavLink className="text-1xl font-medium" exact to="/">Home</NavLink>
@@ -91,7 +91,7 @@ export default function Navbar() {
     {/* mobile menu */}
       <div className='flex flex-row visible md:invisible md:hidden items-center mx-7 mb-7'>
       <div className='flex-1'>
-       <img  src={Logo} alt="logo"  className='w-[120px]'/>
+      <Link exact to="/"><img src={Logo} alt="logo" className='w-[120px]'/></Link>
       </div>
       <div className='flex-1'>
          <img onClick={handleToggle}
@@ -105,13 +105,13 @@ export default function Navbar() {
     {/* mobile navbar */}
     <div  className={isActive ? "hidden": `inline-block w-[100%] h-[100%] relative text-center bg-stone-100 nav ${mode} md:hidden`}>
       <ul className='text-2xl font-normal hover:d '>
-      <NavLink exact to="/"><li className='p-3.5  border-b-2 border-stone-400'>Home</li></NavLink>
+      <NavLink exact to="/"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Home</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Home</li> */}
-      <NavLink  to="/services"><li className='p-3.5  border-b-2 border-stone-400'>Services</li></NavLink>
+      <NavLink  to="/services"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Services</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Services</li> */}
-      <NavLink  to="/projects"><li className='p-3.5  border-b-2 border-stone-400'>Projects</li></NavLink>
+      <NavLink  to="/projects"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Projects</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Projects</li> */}
-      <NavLink  to="/contacts"><li className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li></NavLink>
+      <NavLink  to="/contacts"><li onClick={handleToggle} className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li></NavLink>
         {/* <li className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li> */}
       </ul>
       <div>
