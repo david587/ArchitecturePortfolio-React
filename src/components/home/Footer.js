@@ -1,9 +1,9 @@
 import React from 'react'
 //assets
-import Phone from "../assets/Phone.gif"
-import Area from "../assets/Area.gif"
-import Email from "../assets/Email.gif"
-import  Logo  from "../assets/Mimi.png"
+import Phone from "../../assets/Phone.gif"
+import Area from "../../assets/Area.gif"
+import Email from "../../assets/Email.gif"
+import  Logo  from "../../assets/Mimi.png"
 
 //styles
 import "./Footer.css"

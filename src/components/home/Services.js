@@ -1,11 +1,11 @@
 import React from 'react'
 //assets
-import Zoom from "../assets/Zoom.gif"
-import Pc from "../assets/Pc.gif"
-import Pen from "../assets/Pen.gif"
-import Photo from "../assets/Photo.gif"
-import { useTheme } from "../hooks/useTheme"
-import Services from "../assets/Services.gif"
+import Zoom from "../../assets/Zoom.gif"
+import Pc from "../../assets/Pc.gif"
+import Pen from "../../assets/Pen.gif"
+import Photo from "../../assets/Photo.gif"
+import { useTheme } from "../../hooks/useTheme"
+import Services from "../../assets/Services.gif"
 
 //style
 import "./Services.css"

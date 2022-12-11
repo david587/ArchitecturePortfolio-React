@@ -9,10 +9,10 @@
 }
 
 .layer{
-    background-image: url("../assets/wave-haikei7.svg");
+    background-image: url("../../assets/wave-haikei7.svg");
 }
 .layer.dark{
-    background-image: url("../assets/wave-haikei7dark.svg");
+    background-image: url("../../assets/wave-haikei7dark.svg");
 }
 
 @media only screen and (max-width: 600px){

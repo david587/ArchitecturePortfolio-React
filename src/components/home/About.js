@@ -1,9 +1,11 @@
 import React from 'react'
+//react router
+import {BrowserRouter,Route} from "react-router-dom";
 //assets
-import  Logo  from "../assets/Profile.jpg"
-import  Home  from "../assets/Home.gif"
-import  Cv  from "../assets/Cv.gif"
-import { useTheme } from "../hooks/useTheme"
+import  Logo  from "../../assets/Profile.jpg"
+import  Home  from "../../assets/Home.gif"
+import  Cv  from "../../assets/Cv.gif"
+import { useTheme } from "../../hooks/useTheme"
 
 
 export default function About() {
@@ -15,7 +17,7 @@ export default function About() {
             <p className='text-xl text-beige text-center my-3 md:text-left'> <img src={Home} style={{ filter: mode === "dark" ? "invert(100%)" : "invert(20%)"}}
              alt="Hello" className='w-9 inline-block' /> Welcome everyone</p>
             <div className=''>
-                <h1 className=' text-2xl text-center md:text-left md:text-4xl font-bold '>My name is  <span className='text-beige'>T</span>imea, Improve your Home design, Let me make a Change. </h1>
+                <h1 className=' text-2xl text-center md:text-left md:text-4xl font-bold '>My name is  <span className='text-beige'>T</span>imea, Im a professional Designer, Let me Design your dream home. </h1>
                 <p className='font-normal text-gray-500 text-center md:text-left py-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat id nam at ab maiores debitis similique quasi, voluptatibus inventore vitae impedit 
                 veritatis adipisci distinctio vel amet, libero magnam! Tenetur, quia.</p>
                 <button className='py-2 px-3 border-solid border-beige border-2 text-xl text-beige mx-auto block md:mx-0 md:inline-block'>Contact me</button>

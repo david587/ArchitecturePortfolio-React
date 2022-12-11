@@ -1,15 +1,15 @@
 import React from 'react'
 //assets
-import Bar  from "../assets/Bar.gif"
-import Talk from "../assets/Consultation.gif"
-import Zoom from "../assets/Zoom.gif"
-import Lamp from "../assets/Lamp.gif"
-import Box from "../assets/Box.gif"
+import Bar  from "../../assets/Bar.gif"
+import Talk from "../../assets/Consultation.gif"
+import Zoom from "../../assets/Zoom.gif"
+import Lamp from "../../assets/Lamp.gif"
+import Box from "../../assets/Box.gif"
 
 //style
 import "./Reasons.css"
 
-import { useTheme } from "../hooks/useTheme"
+import { useTheme } from "../../hooks/useTheme"
 
 export default function Reasons() {
   const { mode } = useTheme()

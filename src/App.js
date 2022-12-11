@@ -1,14 +1,15 @@
 import './App.css';
-//components
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Rounded from './components/Rounded';
-import Reasons from './components/Reasons';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Footer from './components/Footer';
+//Homepage components
+import Navbar from './components/home/Navbar';
+import About from './components/home/About';
+import Rounded from './components/home/Rounded';
+import Reasons from './components/home/Reasons';
+import Services from './components/home/Services';
+import Portfolio from './components/home/Portfolio';
+import Footer from './components/home/Footer';
 //hook
 import { useTheme } from "./hooks/useTheme"
+import {Route,Routes} from "react-router-dom"
 
 
 function App() {  
@@ -16,13 +17,13 @@ function App() {
 
   return (
   <div className={`App ${mode}`}>
-  <Navbar/>
-  <About/>
-  <Rounded/>
-  <Reasons/>
-  <Services/>
-  <Portfolio/>
-  <Footer/>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={[<About/>,<Rounded/>,<Reasons/>,<Services/>,<Portfolio/>] }/>
+      <Route path="/services" element={<Rounded/> }/>
+      <Route path="/projects" element={<Services/> }/>
+    </Routes>
+    <Footer/>
   </div>
   );
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 //assets
-import Globe from "../assets/Globe.gif"
-import Project1 from "../assets/Project1.jpg"
-import Project2 from "../assets/Project2.jpg"
-import Project3 from "../assets/Project3.jpg"
+import Globe from "../../assets/Globe.gif"
+import Project1 from "../../assets/Project1.jpg"
+import Project2 from "../../assets/Project2.jpg"
+import Project3 from "../../assets/Project3.jpg"
 //css
 import "./Portfolio.css"
 
-import { useTheme } from "../hooks/useTheme"
+import { useTheme } from "../../hooks/useTheme"
 
 export default function () {
   const { mode } = useTheme()

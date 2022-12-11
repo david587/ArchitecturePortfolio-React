@@ -1,9 +1,9 @@
 /* portfolio.js */
 .layer2{
-    background-image: url("../assets/wave-haikei3.svg");
+    background-image: url("../../assets/wave-haikei3.svg");
 }
 .layer2.dark{
-    background-image: url("../assets/wave-haikei3dark.svg");
+    background-image: url("../../assets/wave-haikei3dark.svg");
 }
 .spacer2{
     /* aspect-ratio: 600/150;

@@ -3,7 +3,7 @@ import "./Rounded.css"
 import React from 'react'
 // import { useRef } from "react"
 
-import { useTheme } from "../hooks/useTheme"
+import { useTheme } from "../../hooks/useTheme"
 import { useState } from "react"
 
 export default function () {

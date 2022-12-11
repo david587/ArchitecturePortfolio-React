@@ -6,12 +6,15 @@ import { motion } from "framer-motion"
 import "./Navbar.css";
 
 //assets
-import  Logo  from "../assets/Mimi.png"
-import  Menu  from "../assets/Menu.svg"
-import  Theme  from "../assets/Moon.svg"
+import  Logo  from "../../assets/Mimi.png"
+import  Menu  from "../../assets/Menu.svg"
+import  Theme  from "../../assets/Moon.svg"
 
 //hook
-import { useTheme } from "../hooks/useTheme"
+import { useTheme } from "../../hooks/useTheme"
+
+import {NavLink,Router} from "react-router-dom"
+
 
 export default function Navbar() {
 
@@ -60,16 +63,20 @@ export default function Navbar() {
         <img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/>
       </div>
       <div>
-        <a href="#" className='text-1xl font-medium'>Home</a>
+        <NavLink className="text-1xl font-medium" exact to="/">Home</NavLink>
+        {/* <a href="#" className='text-1xl font-medium'>Home</a> */}
       </div>
       <div>
-        <a href="#" className='text-1xl font-medium'>Services</a>
+        <NavLink className="text-1xl font-medium" exact to="/services">Services</NavLink>
+        {/* <a href="#" className='text-1xl font-medium'>Services</a> */}
       </div>
       <div>
-        <a href="#" className='text-1xl font-medium'>Projects</a>
+        <NavLink className="text-1xl font-medium" exact to="/projects">Projects</NavLink>
+        {/* <a href="#" className='text-1xl font-medium'>Projects</a> */}
       </div>
       <div>
-        <a href="#" className='text-1xl font-medium'>Contacts</a>
+        <NavLink className="text-1xl font-medium" exact to="/contacts">Contacts</NavLink>
+        {/* <a href="#" className='text-1xl font-medium'>Contacts</a> */}
       </div>
       <div>
         <button className='text-1xl font-medium bg-beige px-5 py-2 w-20 rounded-full mr-20'>
@@ -98,10 +105,14 @@ export default function Navbar() {
     {/* mobile navbar */}
     <div  className={isActive ? "hidden": `inline-block w-[100%] h-[100%] relative text-center bg-stone-100 nav ${mode} md:hidden`}>
       <ul className='text-2xl font-normal hover:d '>
-        <li className='p-3.5  border-b-2 border-stone-400'>Home</li>
-        <li className='p-3.5  border-b-2 border-stone-400'>Services</li>
-        <li className='p-3.5  border-b-2 border-stone-400'>Projects</li>
-        <li className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li>
+      <NavLink exact to="/"><li className='p-3.5  border-b-2 border-stone-400'>Home</li></NavLink>
+        {/* <li className='p-3.5  border-b-2 border-stone-400'>Home</li> */}
+      <NavLink  to="/services"><li className='p-3.5  border-b-2 border-stone-400'>Services</li></NavLink>
+        {/* <li className='p-3.5  border-b-2 border-stone-400'>Services</li> */}
+      <NavLink  to="/projects"><li className='p-3.5  border-b-2 border-stone-400'>Projects</li></NavLink>
+        {/* <li className='p-3.5  border-b-2 border-stone-400'>Projects</li> */}
+      <NavLink  to="/contacts"><li className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li></NavLink>
+        {/* <li className='p-3.5  border-b-2 mb-5 border-stone-400'>Contacts</li> */}
       </ul>
       <div>
       <button className='w-[100px] mx-auto block bg-beige rounded-full mb-5'> <img  onClick={toggleMode} src={Theme} alt="Theme" className='w-6 mx-auto block py-2'/> </button>
