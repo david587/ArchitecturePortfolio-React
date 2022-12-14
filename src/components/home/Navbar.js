@@ -60,22 +60,22 @@ export default function Navbar() {
     <>
     <div className='md:flex md:flex-row md:justify-between justify-center items-center mb-5 hidden md:visible xl:px-[130px]'>
       <div>
-        <Link exact to="/"><img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/></Link>
+        <Link  to="/"><img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/></Link>
       </div>
       <div>
-        <NavLink className="text-1xl font-medium" exact to="/">Home</NavLink>
+        <NavLink className="text-1xl font-medium" to="/">Home</NavLink>
         {/* <a href="#" className='text-1xl font-medium'>Home</a> */}
       </div>
       <div>
-        <NavLink className="text-1xl font-medium" exact to="/services">Services</NavLink>
+        <NavLink className="text-1xl font-medium" to="/services">Services</NavLink>
         {/* <a href="#" className='text-1xl font-medium'>Services</a> */}
       </div>
       <div>
-        <NavLink className="text-1xl font-medium" exact to="/projects">Projects</NavLink>
+        <NavLink className="text-1xl font-medium" to="/projects">Projects</NavLink>
         {/* <a href="#" className='text-1xl font-medium'>Projects</a> */}
       </div>
       <div>
-        <NavLink className="text-1xl font-medium" exact to="/contacts">Contacts</NavLink>
+        <NavLink className="text-1xl font-medium" to="/contacts">Contacts</NavLink>
         {/* <a href="#" className='text-1xl font-medium'>Contacts</a> */}
       </div>
       <div>
@@ -91,7 +91,7 @@ export default function Navbar() {
     {/* mobile menu */}
       <div className='flex flex-row visible md:invisible md:hidden items-center mx-7 mb-7'>
       <div className='flex-1'>
-      <Link exact to="/"><img src={Logo} alt="logo" className='w-[120px]'/></Link>
+      <Link  to="/"><img src={Logo} alt="logo" className='w-[120px]'/></Link>
       </div>
       <div className='flex-1'>
          <img onClick={handleToggle}
@@ -105,7 +105,7 @@ export default function Navbar() {
     {/* mobile navbar */}
     <div  className={isActive ? "hidden": `inline-block w-[100%] h-[100%] relative text-center bg-stone-100 nav ${mode} md:hidden`}>
       <ul className='text-2xl font-normal hover:d '>
-      <NavLink exact to="/"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Home</li></NavLink>
+      <NavLink  to="/"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Home</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Home</li> */}
       <NavLink  to="/services"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Services</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Services</li> */}

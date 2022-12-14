@@ -14,12 +14,17 @@ import {Route,Routes} from "react-router-dom"
 
 function App() {  
   const { mode } = useTheme()
+  let id = Math.random()*100;
 
   return (
   <div className={`App ${mode}`}>
     <Navbar/>
     <Routes>
-      <Route path="/" exact={true} element={[<About/>,<Rounded/>,<Reasons/>,<Services/>,<Portfolio/>] }/>
+      <Route  path="/" element={[<About key={Math.random()  *100} />,
+      <Rounded key={Math.random()  *100}/>,
+      <Reasons key={Math.random()  *100}/>,
+      <Services  key={Math.random()} />,
+      <Portfolio  key={Math.random()}/>] }/>
       <Route path="/services" element={<Rounded/> }/>
       <Route path="/projects" element={<Services/> }/>
       <Route path="/contacts" element={<Services/> }/>
