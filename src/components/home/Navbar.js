@@ -40,8 +40,6 @@ export default function Navbar() {
 
   
   const data = JSON.parse(window.localStorage.getItem('mode'));
-  console.log("dataout",data);
-  console.log("modeout",mode);
   //when we reload the page check the localstorage
   useEffect(()=>{
     if(data!=mode){

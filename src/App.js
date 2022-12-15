@@ -7,6 +7,9 @@ import Reasons from './components/home/Reasons';
 import Services from './components/home/Services';
 import Portfolio from './components/home/Portfolio';
 import Footer from './components/home/Footer';
+//Contact Components
+import Touch from "./components/contacts/Touch";
+import Form from "./components/contacts/Form";
 //hook
 import { useTheme } from "./hooks/useTheme"
 import {Route,Routes} from "react-router-dom"
@@ -33,7 +36,9 @@ function App() {
       <Portfolio  key={Math.random()}/>] }/>
       
       <Route path="/projects" element={<Services/> }/>
-      <Route path="/contacts" element={<Services/> }/>
+      
+      <Route path="/contacts" element={[<Touch key={Math.random()  *100}/>,
+      <Form key={Math.random()  *100}/>] }/>
     </Routes>
     <Footer/>
   </div>
