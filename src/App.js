@@ -10,32 +10,35 @@ import Footer from './components/home/Footer';
 //Contact Components
 import Touch from "./components/contacts/Touch";
 import Form from "./components/contacts/Form";
+
 //hook
 import { useTheme } from "./hooks/useTheme"
 import {Route,Routes} from "react-router-dom"
+import { useRef } from 'react';
 
-
-function App() {  
+export default function App() {  
   const { mode } = useTheme()
-  // let id = Math.random()*100;
+
+  const ref = useRef(null);
+  console.log(ref);
 
   return (
   <div className={`App ${mode}`}>
-    <Navbar/>
+    <Navbar Appref={ref}/>
     <Routes>
       <Route  path="/" element={[<About key={Math.random()  *100} />,
       <Rounded key={Math.random()  *100}/>,
       <Reasons key={Math.random()  *100}/>,
-      <Services  key={Math.random()} />,
+      <Services ref={ref} key={Math.random()} />,
       <Portfolio  key={Math.random()}/>] }/>
 
       <Route  path="/services" element={[<About key={Math.random()  *100} />,
       <Rounded key={Math.random()  *100}/>,
       <Reasons key={Math.random()  *100}/>,
-      <Services  key={Math.random()} />,
+      <Services ref={ref} text="hello" key={Math.random()} />,
       <Portfolio  key={Math.random()}/>] }/>
       
-      <Route path="/projects" element={<Services/> }/>
+      {/* <Route path="/projects" element={<Services/> }/> */}
       
       <Route path="/contacts" element={[<Touch key={Math.random()  *100}/>,
       <Form key={Math.random()  *100}/>] }/>
@@ -44,5 +47,3 @@ function App() {
   </div>
   );
 }
-
-export default App;

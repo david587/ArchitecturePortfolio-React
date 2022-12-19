@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 //assets
 import Zoom from "../../assets/Zoom.gif"
 import Pc from "../../assets/Pc.gif"
@@ -10,11 +10,13 @@ import Services from "../../assets/Services.gif"
 //style
 import "./Services.css"
 
-export default function Dreams() {
+function Dreams({text}, ref) {
   const { mode } = useTheme()
+    
   return (
     <>
-    <div className={`md:px-20 py-10 div ${mode} xl:px-[130px]`}>
+    <div ref={ref} className={`md:px-20 py-10 div ${mode} xl:px-[130px]`}>
+      <h1>{text}</h1>
     <p className='text-center md:text-left font-light text-beige text-2xl underline'><img src={Services} style={{ filter: mode === "dark" ? "invert(100%)" : "invert(20%)"}}
      alt="tool" className='w-9 inline-block '/> Services of my skills</p>
     <div className=' grid md:flex md:flex-row justify-between my-5 '>
@@ -60,3 +62,5 @@ export default function Dreams() {
     </>
   )
 }
+
+export default forwardRef(Dreams);

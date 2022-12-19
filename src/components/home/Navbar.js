@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect} from 'react'
+import { useState,useEffect,useRef} from 'react'
 //animation library
 import { motion } from "framer-motion"
 //style
@@ -14,26 +14,18 @@ import  Theme  from "../../assets/Moon.svg"
 import { useTheme } from "../../hooks/useTheme"
 
 import {NavLink,Link} from "react-router-dom"
+import { ClickScroll } from '../handleScroll';
 
-
-export default function Navbar() {
+export default function Navbar({Appref}) {
 
   // const [notes, setNotes] = useState(storedNotes)
   const { changeMode, mode } = useTheme()
  
-
-  
-
   const [isActive, setIsActive] =useState(true);
   const handleToggle = ()=>{
     setIsActive(!isActive);
   }
 
-  
-  // const [modes, setModes] = useState(data);
-
-
- 
   useEffect(() => {
     window.localStorage.setItem('mode', JSON.stringify(mode))
   }, [mode])
@@ -42,20 +34,25 @@ export default function Navbar() {
   const data = JSON.parse(window.localStorage.getItem('mode'));
   //when we reload the page check the localstorage
   useEffect(()=>{
-    if(data!=mode){
+    if(data!==mode){
       changeMode(mode === "dark" ? "light":"dark")
     }
   },[])
    
-  
   const toggleMode=()=>{
     changeMode(mode === "dark" ? "light":"dark")
   }
 
+  //Scroll to services
+  const handleClickScroll = ()=>{
+    console.log(Appref);
+    ClickScroll(Appref);
+  }
   
-  
+
   return (
     <>
+    
     <div className='md:flex md:flex-row md:justify-between justify-center items-center mb-5 hidden md:visible xl:px-[130px]'>
       <div>
         <Link  to="/"><img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/></Link>
@@ -65,7 +62,7 @@ export default function Navbar() {
         {/* <a href="#" className='text-1xl font-medium'>Home</a> */}
       </div>
       <div>
-        <NavLink className="text-1xl font-medium" to="/services">Services</NavLink>
+        <NavLink onClick={handleClickScroll} className="text-1xl font-medium" to="/services">Services</NavLink>
         {/* <a href="#" className='text-1xl font-medium'>Services</a> */}
       </div>
       <div>
@@ -84,6 +81,8 @@ export default function Navbar() {
         className='w-5 mx-auto block' /> </button>
       </div>
     </div>
+    {/* {isfalse && <Services ref={ref} text="hello"/>} */}
+    
     
 
     {/* mobile menu */}
@@ -105,7 +104,7 @@ export default function Navbar() {
       <ul className='text-2xl font-normal hover:d '>
       <NavLink  to="/"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Home</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Home</li> */}
-      <NavLink  to="/services"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Services</li></NavLink>
+      <NavLink onClick={handleClickScroll} to="/services"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Services</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Services</li> */}
       <NavLink  to="/projects"><li onClick={handleToggle} className='p-3.5  border-b-2 border-stone-400'>Projects</li></NavLink>
         {/* <li className='p-3.5  border-b-2 border-stone-400'>Projects</li> */}
