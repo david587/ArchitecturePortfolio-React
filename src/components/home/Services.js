@@ -1,23 +1,22 @@
-import React, { forwardRef } from 'react'
+import { forwardRef,useState } from 'react'
 //assets
 import Zoom from "../../assets/Zoom.gif"
 import Pc from "../../assets/Pc.gif"
 import Pen from "../../assets/Pen.gif"
 import Photo from "../../assets/Photo.gif"
 import { useTheme } from "../../hooks/useTheme"
-import Services from "../../assets/Services.gif"
+import Servicesimg from "../../assets/Services.gif"
 
 //style
 import "./Services.css"
 
-function Dreams({text}, ref) {
+function Services({text}, ref) {
+
+
   const { mode } = useTheme()
-    
   return (
-    <>
     <div ref={ref} className={`md:px-20 py-10 div ${mode} xl:px-[130px]`}>
-      <h1>{text}</h1>
-    <p className='text-center md:text-left font-light text-beige text-2xl underline'><img src={Services} style={{ filter: mode === "dark" ? "invert(100%)" : "invert(20%)"}}
+    <p className='text-center md:text-left font-light text-beige text-2xl underline'><img src={Servicesimg} style={{ filter: mode === "dark" ? "invert(100%)" : "invert(20%)"}}
      alt="tool" className='w-9 inline-block '/> Services of my skills</p>
     <div className=' grid md:flex md:flex-row justify-between my-5 '>
       <div className='flex-1'>
@@ -57,10 +56,7 @@ function Dreams({text}, ref) {
       </div>
     </div>
     </div>
-
-    
-    </>
   )
 }
-
-export default forwardRef(Dreams);
+const forwaredInput = forwardRef(Services);
+export default (forwaredInput);

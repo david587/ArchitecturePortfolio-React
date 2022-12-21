@@ -15,6 +15,7 @@ import { useTheme } from "../../hooks/useTheme"
 
 import {NavLink,Link} from "react-router-dom"
 import { ClickScroll } from '../handleScroll';
+import App from '../../App';
 
 export default function Navbar({Appref}) {
 
@@ -42,11 +43,26 @@ export default function Navbar({Appref}) {
   const toggleMode=()=>{
     changeMode(mode === "dark" ? "light":"dark")
   }
+  
+  const [btnRef, setBtnRef] = useState(null);
+
+  useEffect(() => {
+    console.log(Appref);
+    checkoutBtnRef(Appref)
+  }, [Appref]);
+
+  const checkoutBtnRef = (Appref) => {
+    if (Appref) setBtnRef(Appref);
+  };
+
 
   //Scroll to services
   const handleClickScroll = ()=>{
-    console.log(Appref);
-    ClickScroll(Appref);
+    checkoutBtnRef(btnRef)
+    // console.log(btnRef);
+    console.log(btnRef);
+    ClickScroll(btnRef);
+
   }
   
 
@@ -58,7 +74,7 @@ export default function Navbar({Appref}) {
         <Link  to="/"><img src={Logo} alt="logo" className='w-40 ml-20 mr-10'/></Link>
       </div>
       <div>
-        <NavLink className="text-1xl font-medium" to="/">Home</NavLink>
+        <NavLink  className="text-1xl font-medium" to="/">Home</NavLink>
         {/* <a href="#" className='text-1xl font-medium'>Home</a> */}
       </div>
       <div>
@@ -81,7 +97,7 @@ export default function Navbar({Appref}) {
         className='w-5 mx-auto block' /> </button>
       </div>
     </div>
-    {/* {isfalse && <Services ref={ref} text="hello"/>} */}
+    {/* {isfalse && <Services Appref={ref} text="hello"/>} */}
     
     
 
