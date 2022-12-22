@@ -28,10 +28,6 @@ export default function AboutMe() {
           </div>
 
           {/* //project */}
-          <div className={`spacer2 layer2 ${mode}`}></div>
-          <div className='bg-[#d6d3d1]'>
-            
-          </div>
     </div>
   )
 }

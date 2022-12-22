@@ -46,14 +46,16 @@ export default function Navbar({Appref}) {
   
   const [btnRef, setBtnRef] = useState(null);
 
-  useEffect(() => {
-    console.log(Appref);
-    checkoutBtnRef(Appref)
-  }, [Appref]);
+ 
 
   const checkoutBtnRef = (Appref) => {
     if (Appref) setBtnRef(Appref);
   };
+
+  useEffect(() => {
+    console.log(Appref);
+    checkoutBtnRef(Appref)
+  }, [Appref]);
 
 
   //Scroll to services
