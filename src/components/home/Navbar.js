@@ -81,7 +81,7 @@ export default function Navbar({Appref}) {
       </div>
       <div>
         <NavLink onClick={handleClickScroll} className="text-1xl font-medium" to="/services">Services</NavLink>
-        {/* <a href="#" className='text-1xl font-medium'>Services</a> */}
+        {/* <a onClick={handleClickScroll} className='text-1xl font-medium'>Services</a> */}
       </div>
       <div>
         <NavLink className="text-1xl font-medium" to="/projects">Projects</NavLink>

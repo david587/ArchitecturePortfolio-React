@@ -9,6 +9,9 @@ import "./Portfolio.css"
 
 import { useTheme } from "../../hooks/useTheme"
 
+//router
+import {Link} from "react-router-dom"
+
 export default function () {
   const { mode } = useTheme()
   return (
@@ -36,7 +39,7 @@ export default function () {
       <img src={Mouse} alt="mouse" 
       className='w-[50px] h-[52px] absolute top-0 left-0 border-white border-2 rounded-lg'/>
       </button> */}
-      <button className='border-2 px-5 py-2 text-xl font-normal ml-auto mr-auto block '>View More</button>
+      <button className='border-2 px-5 py-2 text-xl font-normal ml-auto mr-auto block '><a href="/projects">View More</a></button>
       <div className='h-9'></div>
     </div>
     </div>
