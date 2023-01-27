@@ -1,16 +1,1 @@
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-44-55.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-45-38.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-45-57.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-48-57.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-49-10.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-49-18.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-49-32.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-49-49.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-50-22.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-50-57.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-51-09.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-51-18.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-51-33.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-51-40.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-51-53.png
-file:///home/davis/Desktop/k%C3%A9pek/timi/Screenshot%20from%202023-01-27%2015-51-59.png
+![My Image](images/Screenshot from 2023-01-27 15-44-55.png)
