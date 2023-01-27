@@ -2,7 +2,7 @@ import React from 'react'
 //hook
 import { useTheme } from "../../hooks/useTheme"
 //assets
-import  Logo  from "../../assets/Profile.jpg"
+import  Logo  from "../../assets/me.svg"
 import  LogoIcon  from "../../assets/Mimi.png"
 
 export default function AboutMe() {

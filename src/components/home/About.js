@@ -2,7 +2,7 @@ import React from 'react'
 //react router
 import {BrowserRouter,Route} from "react-router-dom";
 //assets
-import  Logo  from "../../assets/Profile.jpg"
+import  Logo  from "../../assets/city.svg"
 import  Home  from "../../assets/Home.gif"
 import  Cv  from "../../assets/Cv.gif"
 import { useTheme } from "../../hooks/useTheme"
@@ -25,7 +25,7 @@ export default function About() {
             </div>
         </div>
         <div className='flex-1 mt-5 text-center'>
-            <img src={Logo} alt="Timea" className='w-80 ml-auto mr-auto rounded-sm'/>
+            <img src={Logo} alt="Timea" className='w-100 ml-auto mr-auto rounded-sm'/>
         </div>
     </div>
     </>
